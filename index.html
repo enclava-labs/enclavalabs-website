@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enclava Labs — Confidential Computing Infrastructure</title>
-  <meta name="description" content="Confidential computing infrastructure. Enclava.dev for confidential applications, Enclava.ai for confidential AI.">
+  <title>Enclava Labs — Confidential Computing, AI &amp; Security</title>
+  <meta name="description" content="Confidential computing infrastructure and consulting for applied AI, secure systems architecture, and cybersecurity.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none'><path d='M16 2L4 8v8c0 7.2 5.1 13.9 12 16 6.9-2.1 12-8.8 12-16V8L16 2z' stroke='%2300bcd4' stroke-width='1.5'/><rect x='12' y='13' width='8' height='6' rx='1' stroke='%2300bcd4' stroke-width='1'/></svg>">
 
   <!-- Fonts -->
@@ -537,6 +537,188 @@
     .product-ai .product-link:hover { color: var(--brand-ai); }
 
     /* ========================================
+       Services
+       ======================================== */
+    .services {
+      padding: 9rem 0;
+      border-top: 1px solid var(--line-faint);
+      position: relative;
+    }
+
+    .services-header {
+      display: grid;
+      grid-template-columns: 7fr 5fr;
+      gap: 4rem;
+      align-items: end;
+      margin-bottom: 4rem;
+    }
+
+    .services-header h2 {
+      font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+      font-weight: 400;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+      color: var(--fg);
+    }
+
+    .services-header p {
+      color: var(--fg-muted);
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: 1.75;
+      max-width: 420px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border: 1px solid var(--line);
+    }
+
+    .service-practice {
+      padding: 3.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-practice + .service-practice {
+      border-left: 1px solid var(--line);
+    }
+
+    .service-practice::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 0.4s var(--ease);
+      pointer-events: none;
+    }
+
+    .service-practice:hover::before { opacity: 1; }
+
+    .service-ai::before {
+      background: radial-gradient(520px circle at 10% 0%, hsla(252, 48%, 70%, 0.07), transparent 62%);
+    }
+
+    .service-security::before {
+      background: radial-gradient(520px circle at 10% 0%, hsla(187, 72%, 54%, 0.06), transparent 62%);
+    }
+
+    .service-practice > * { position: relative; }
+
+    .service-index {
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      letter-spacing: 0.12em;
+      color: var(--fg-faint);
+      margin-bottom: 3rem;
+    }
+
+    .service-kicker {
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+      font-family: var(--font-mono);
+      font-size: 0.625rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--fg-muted);
+      margin-bottom: 1rem;
+    }
+
+    .service-kicker::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .service-ai .service-kicker::before { background: var(--brand-ai); }
+    .service-security .service-kicker::before { background: var(--accent); }
+
+    .service-practice h3 {
+      font-size: clamp(1.75rem, 3vw, 2.5rem);
+      font-weight: 400;
+      letter-spacing: -0.03em;
+      color: var(--fg);
+      margin-bottom: 1rem;
+    }
+
+    .service-intro {
+      color: var(--fg-muted);
+      font-size: 0.9375rem;
+      font-weight: 300;
+      line-height: 1.75;
+      max-width: 460px;
+      margin-bottom: 2.5rem;
+    }
+
+    .service-list {
+      list-style: none;
+      border-top: 1px solid var(--line);
+    }
+
+    .service-list li {
+      display: grid;
+      grid-template-columns: 2rem 1fr;
+      gap: 1rem;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .service-list .service-number {
+      font-family: var(--font-mono);
+      font-size: 0.625rem;
+      letter-spacing: 0.08em;
+      color: var(--fg-faint);
+      padding-top: 0.2rem;
+    }
+
+    .service-list h4 {
+      font-family: var(--font-sans);
+      font-size: 0.9375rem;
+      font-weight: 500;
+      letter-spacing: 0;
+      color: var(--fg);
+      margin-bottom: 0.375rem;
+    }
+
+    .service-list p {
+      color: var(--fg-muted);
+      font-size: 0.8125rem;
+      font-weight: 300;
+      line-height: 1.65;
+    }
+
+    .services-action {
+      margin-top: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .services-action p {
+      color: var(--fg-muted);
+      font-size: 0.875rem;
+      font-weight: 300;
+    }
+
+    @media (max-width: 768px) {
+      .services-header { grid-template-columns: 1fr; gap: 1.5rem; }
+      .services-grid { grid-template-columns: 1fr; }
+      .service-practice { padding: 2.5rem; }
+      .service-practice + .service-practice {
+        border-left: none;
+        border-top: 1px solid var(--line);
+      }
+      .services-action { align-items: flex-start; flex-direction: column; }
+    }
+
+    /* ========================================
        Why
        ======================================== */
     .why {
@@ -916,12 +1098,14 @@
        ======================================== */
     @media (max-width: 640px) {
       .container { padding: 0 1.5rem; }
-      .nav-links li:not(:last-child) { display: none; }
+      .nav-links { gap: 1rem; }
+      .nav-links li:not(.mobile-priority):not(:last-child) { display: none; }
       .hero h1 { font-size: 2.75rem; }
       .hero-actions { flex-direction: column; }
       .hero-actions a { text-align: center; justify-content: center; }
       .products-header { margin-bottom: 3rem; }
-      .products, .why, .trust, .cta-section { padding: 6rem 0; }
+      .products, .services, .why, .trust, .cta-section { padding: 6rem 0; }
+      .service-practice { padding: 2rem 1.5rem; }
     }
   </style>
 </head>
@@ -933,6 +1117,7 @@
       <a href="/" class="logo">Enclava Labs</a>
       <ul class="nav-links">
         <li><a href="#products">Products</a></li>
+        <li class="mobile-priority"><a href="#services">Services</a></li>
         <li><a href="#why">Approach</a></li>
         <li><a href="#trust">About</a></li>
         <li><a href="mailto:hello@enclavalabs.com" class="nav-cta">Contact</a></li>
@@ -1072,6 +1257,81 @@
       </div>
     </section>
 
+    <!-- ====== SERVICES ====== -->
+    <section class="services" id="services">
+      <div class="container">
+        <div class="services-header">
+          <div class="reveal">
+            <div class="section-label">Services</div>
+            <h2>Deep technical work,<br>built for production</h2>
+          </div>
+          <p class="reveal reveal-delay-1">We help teams turn ambitious AI and security requirements into systems that are useful, resilient, and ready to operate.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-practice service-ai reveal">
+            <div class="service-index">01 / AI SYSTEMS</div>
+            <div class="service-kicker">Applied AI</div>
+            <h3>AI that changes how work gets done</h3>
+            <p class="service-intro">From the first workflow to a bespoke product, we design and build AI systems around your business, data, and operating constraints.</p>
+            <ul class="service-list">
+              <li>
+                <span class="service-number">01</span>
+                <div>
+                  <h4>AI automation for companies</h4>
+                  <p>Automate high-value workflows with agents, retrieval, integrations, and human oversight where it matters.</p>
+                </div>
+              </li>
+              <li>
+                <span class="service-number">02</span>
+                <div>
+                  <h4>Bespoke AI products</h4>
+                  <p>Design and engineering for custom AI applications, from focused prototypes through production delivery.</p>
+                </div>
+              </li>
+              <li>
+                <span class="service-number">03</span>
+                <div>
+                  <h4>Confidential AI solutions</h4>
+                  <p>Custom systems on top of confidential computing for sensitive models, data, and regulated workloads.</p>
+                </div>
+              </li>
+            </ul>
+          </article>
+
+          <article class="service-practice service-security reveal reveal-delay-1">
+            <div class="service-index">02 / SECURE FOUNDATIONS</div>
+            <div class="service-kicker">Security &amp; Architecture</div>
+            <h3>Security designed into the system</h3>
+            <p class="service-intro">We work with engineering and leadership teams to make sound architectural decisions, reduce exposure, and build security into the foundation.</p>
+            <ul class="service-list">
+              <li>
+                <span class="service-number">01</span>
+                <div>
+                  <h4>Secure systems architecture</h4>
+                  <p>Architecture design and review for distributed, cloud, and confidential systems with clear trust boundaries.</p>
+                </div>
+              </li>
+              <li>
+                <span class="service-number">02</span>
+                <div>
+                  <h4>Cybersecurity consulting</h4>
+                  <p>Practical threat modelling, security assessments, and technical guidance tied to real operational risk.</p>
+                </div>
+              </li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="services-action reveal">
+          <p>Have a difficult AI, privacy, or security problem?</p>
+          <a href="mailto:hello@enclavalabs.com?subject=Services%20inquiry" class="product-link">
+            Talk to our team <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!-- ====== WHY ====== -->
     <section class="why" id="why">
       <div class="container">
@@ -1159,7 +1419,7 @@
         <div class="reveal">
           <div class="section-label">Get in touch</div>
           <h2>Let's build something confidential</h2>
-          <p>Whether you're deploying secure infrastructure or building privacy-preserving AI — we'd love to hear from you.</p>
+          <p>Whether you're deploying secure infrastructure, building with AI, or strengthening your architecture — we'd love to hear from you.</p>
           <div class="cta-actions">
             <a href="mailto:hello@enclavalabs.com" class="btn-primary">
               Contact Us <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
@@ -1192,13 +1452,14 @@
         <div class="footer-col">
           <h5>Company</h5>
           <ul>
+            <li><a href="#services">Services</a></li>
             <li><a href="mailto:hello@enclavalabs.com">Contact</a></li>
             <li><a href="https://github.com/enclava-labs" target="_blank" rel="noopener">GitHub</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 Enclava Labs AG. All rights reserved.</p>
+        <p>&copy; 2025 Enclava Labs GmbH. All rights reserved.</p>
         <div class="footer-bottom-links">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Service</a>
