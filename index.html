@@ -27,11 +27,11 @@
   --border:#29313D;
   --text:#F9FAFB;
   --muted:#B6BEC9;
-  --teal:#0BB8DA;    /* layer 03 — confidential infrastructure (enclava.dev primary cyan) */
-  --teal-hi:#0DCCF2; /* cyan for text on dark + glows */
-  --violet:#10B77F;  /* layer 01 — Enclava, the company brain (green) */
-  --violet-hi:#12D393;/* green for text on dark + glows */
-  --fusion:linear-gradient(90deg,#0DCCF2,#12D393);
+  --teal:#41AFC8;    /* enclava.dev cyan, softened from #0BB8DA */
+  --teal-hi:#6AC7DC; /* cyan for text on dark + glows, softened from #0DCCF2 */
+  --violet:#39AC82;  /* Enclava green, softened from #10B77F */
+  --violet-hi:#68CAA6;/* green for text on dark + glows, softened from #12D393 */
+  --fusion:linear-gradient(90deg,#6AC7DC,#68CAA6);
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;text-size-adjust:100%;color-scheme:dark}
@@ -46,7 +46,7 @@ a{color:inherit;text-decoration:none;-webkit-tap-highlight-color:transparent;tou
 .mono{font-family:'JetBrains Mono',ui-monospace,monospace}
 .nw{white-space:nowrap}
 a:focus-visible,button:focus-visible{outline:2px solid var(--teal-hi);outline-offset:3px;border-radius:6px}
-.skip{position:fixed;top:16px;left:50%;transform:translate(-50%,-140%);z-index:100;background:#0DCCF2;color:#0E1525;font:600 14px 'JetBrains Mono';padding:12px 24px;border-radius:999px;transition:transform .2s}
+.skip{position:fixed;top:16px;left:50%;transform:translate(-50%,-140%);z-index:100;background:#6AC7DC;color:#0E1525;font:600 14px 'JetBrains Mono';padding:12px 24px;border-radius:999px;transition:transform .2s}
 .skip:focus-visible{transform:translate(-50%,0);outline-color:#fff}
 #infrastructure,#inference,#enclava,#verify,#work{scroll-margin-top:100px}
 
@@ -138,11 +138,11 @@ h1 span{display:block}
 .stack-lines{position:absolute;inset:0;z-index:3;pointer-events:none}
 .stage-haze{position:absolute;left:50%;top:32%;transform:translate(-50%,-50%);width:940px;height:620px;border-radius:50%;background:radial-gradient(closest-side,rgba(13,204,242,.08),rgba(13,204,242,.025) 55%,transparent 75%);pointer-events:none}
 .layer{position:absolute;left:0;width:100%;border-radius:22px;text-align:left;box-shadow:inset 0 1px 0 rgba(255,255,255,.05),0 30px 80px -44px rgba(0,0,0,.6);z-index:2}
-.lchip{position:absolute;left:44px;display:inline-flex;align-items:center;gap:9px;font:500 11.5px 'JetBrains Mono';letter-spacing:.05em;padding:7px 14px;border-radius:999px}
+.lchip{position:absolute;left:62px;display:inline-flex;align-items:center;gap:9px;font:500 11.5px 'JetBrains Mono';letter-spacing:.05em;padding:7px 14px;border-radius:999px}
 .lchip i{width:7px;height:7px;border-radius:50%;flex:none}
 .lchip-brain{color:var(--violet-hi);border:1px solid rgba(18,211,147,.38);background:rgba(18,211,147,.09)}
 .lchip-brain i{background:var(--violet)}
-.lchip-plain{left:30px;color:var(--muted);border:1px solid rgba(182,190,201,.16);background:rgba(27,34,50,.5)}
+.lchip-plain{left:60px;color:var(--muted);border:1px solid rgba(182,190,201,.16);background:rgba(27,34,50,.5)}
 .lchip-plain i{background:var(--fusion)}
 .lchip-infra{color:var(--teal-hi);border:1px solid rgba(13,204,242,.35);background:rgba(13,204,242,.08)}
 .lchip-infra i{background:var(--teal)}
@@ -262,7 +262,7 @@ h2{font:700 58px/1.05 'Plus Jakarta Sans',sans-serif;letter-spacing:-.03em;margi
 .g-brain{grid-template-columns:1fr 1fr;align-items:center}
 .ch-em{margin:20px 0 26px;padding-left:16px;border-left:2px solid var(--violet);font-size:16px;line-height:1.6;color:#DCE4EC}
 .ch-infra .ch-em{border-left-color:var(--teal)}
-.ch-inf .ch-em{max-width:760px;border-left:0;background:linear-gradient(#0DCCF2,#12D393) left/2px 100% no-repeat}
+.ch-inf .ch-em{max-width:760px;border-left:0;background:linear-gradient(#6AC7DC,#68CAA6) left/2px 100% no-repeat}
 .cpoints{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px}
 .cpoints li{padding:17px 20px 15px;border:1px solid #2B3546;border-radius:13px;background:rgba(20,28,42,.55);font-size:14px;color:var(--muted);line-height:1.6}
 .cpoints b{display:block;font:600 15px 'Inter';color:var(--text);margin:7px 0 6px}
@@ -342,7 +342,7 @@ h2{font:700 58px/1.05 'Plus Jakarta Sans',sans-serif;letter-spacing:-.03em;margi
 .p-arrow::after{content:"";position:absolute;inset:0}
 .erows{display:flex;flex-direction:column;gap:8px;margin:20px 0 2px}
 .erow{font:11.5px 'JetBrains Mono';color:#8D9BAB;border:1px solid #313D50;background:#182231;border-radius:8px;padding:8.5px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.erow b{font:600 10px 'JetBrains Mono';color:#7FEFC9;margin-right:9px}
+.erow b{font:600 10px 'JetBrains Mono';color:#A4DBC6;margin-right:9px}
 /* fusion band */
 .fusion-band{margin-top:30px;border-radius:20px;padding:1.5px;background:var(--fusion)}
 .fusion-band-in{display:flex;align-items:center;gap:18px;border-radius:18.5px;background:linear-gradient(90deg,#182231,#182A33);padding:22px 30px;font:500 17.5px/1.55 'Inter'}
@@ -613,10 +613,10 @@ footer{border-top:1px solid var(--border);padding:66px 0 44px;background:rgba(17
     <svg class="stack-lines" width="1160" height="1008" viewBox="0 0 1160 1008" fill="none" aria-hidden="true">
       <defs>
         <linearGradient id="spine" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#0DCCF2"/><stop offset=".5" stop-color="#10CFC3"/><stop offset="1" stop-color="#12D393"/>
+          <stop offset="0" stop-color="#6AC7DC"/><stop offset=".5" stop-color="#69C8C1"/><stop offset="1" stop-color="#68CAA6"/>
         </linearGradient>
         <linearGradient id="cwireG" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#10CFC3"/><stop offset="1" stop-color="#12D393"/>
+          <stop offset="0" stop-color="#69C8C1"/><stop offset="1" stop-color="#68CAA6"/>
         </linearGradient>
       </defs>
 
@@ -625,26 +625,26 @@ footer{border-top:1px solid var(--border);padding:66px 0 44px;background:rgba(17
 
       <!-- layer nodes -->
       <g font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="600">
-        <rect x="5" y="18" width="12" height="12" rx="3" fill="#0BB8DA"/>
+        <rect x="5" y="18" width="12" height="12" rx="3" fill="#41AFC8"/>
         <rect x="21" y="12" width="30" height="22" rx="6" fill="#151B28"/>
-        <text x="27" y="27.5" fill="#0DCCF2">01</text>
-        <rect x="5" y="370" width="12" height="12" rx="3" fill="#10CFC3"/>
+        <text x="27" y="27.5" fill="#6AC7DC">01</text>
+        <rect x="5" y="370" width="12" height="12" rx="3" fill="#69C8C1"/>
         <rect x="21" y="364" width="30" height="22" rx="6" fill="#151B28"/>
-        <text x="27" y="379.5" fill="#10CFC3">02</text>
-        <rect x="5" y="642" width="12" height="12" rx="3" fill="#10B77F"/>
+        <text x="27" y="379.5" fill="#69C8C1">02</text>
+        <rect x="5" y="642" width="12" height="12" rx="3" fill="#39AC82"/>
         <rect x="21" y="636" width="30" height="22" rx="6" fill="#151B28"/>
-        <text x="27" y="651.5" fill="#12D393">03</text>
+        <text x="27" y="651.5" fill="#68CAA6">03</text>
       </g>
 
       <!-- workloads into the deploy terminal -->
-      <g stroke="#0DCCF2" stroke-opacity=".6" stroke-width="1.5">
+      <g stroke="#6AC7DC" stroke-opacity=".6" stroke-width="1.5">
         <line x1="264" y1="150" x2="284" y2="150"/>
         <line x1="264" y1="181" x2="284" y2="181"/>
         <line x1="264" y1="216" x2="284" y2="216"/>
       </g>
-      <circle cx="284" cy="150" r="2.5" fill="#0DCCF2" fill-opacity=".75"/>
-      <circle cx="284" cy="181" r="2.5" fill="#0DCCF2" fill-opacity=".75"/>
-      <circle cx="284" cy="216" r="2.5" fill="#0DCCF2" fill-opacity=".75"/>
+      <circle cx="284" cy="150" r="2.5" fill="#6AC7DC" fill-opacity=".75"/>
+      <circle cx="284" cy="181" r="2.5" fill="#6AC7DC" fill-opacity=".75"/>
+      <circle cx="284" cy="216" r="2.5" fill="#6AC7DC" fill-opacity=".75"/>
 
       <!-- core fans UP to the three route cards -->
       <g stroke-width="1.5" stroke-opacity=".7">
@@ -652,21 +652,21 @@ footer{border-top:1px solid var(--border);padding:66px 0 44px;background:rgba(17
         <path d="M580 553 L580 516" stroke="url(#cwireG)"/>
         <path d="M612 557 C 662 536, 760 534, 853.3 516" stroke="url(#cwireG)"/>
       </g>
-      <circle cx="306.7" cy="516" r="2.5" fill="#12D393" fill-opacity=".75"/>
-      <circle cx="853.3" cy="516" r="2.5" fill="#12D393" fill-opacity=".75"/>
+      <circle cx="306.7" cy="516" r="2.5" fill="#68CAA6" fill-opacity=".75"/>
+      <circle cx="853.3" cy="516" r="2.5" fill="#68CAA6" fill-opacity=".75"/>
 
       <!-- core down into the answer card -->
       <path d="M580 687 L580 700" stroke="url(#cwireG)" stroke-width="2" stroke-opacity=".9"/>
 
       <!-- sources into the answer card -->
-      <g stroke="#12D393" stroke-opacity=".6" stroke-width="1.5">
+      <g stroke="#68CAA6" stroke-opacity=".6" stroke-width="1.5">
         <line x1="264" y1="781" x2="284" y2="781"/>
         <line x1="264" y1="819" x2="284" y2="819"/>
         <line x1="264" y1="857" x2="284" y2="857"/>
       </g>
-      <circle cx="284" cy="781" r="2.5" fill="#12D393" fill-opacity=".75"/>
-      <circle cx="284" cy="819" r="2.5" fill="#12D393" fill-opacity=".75"/>
-      <circle cx="284" cy="857" r="2.5" fill="#12D393" fill-opacity=".75"/>
+      <circle cx="284" cy="781" r="2.5" fill="#68CAA6" fill-opacity=".75"/>
+      <circle cx="284" cy="819" r="2.5" fill="#68CAA6" fill-opacity=".75"/>
+      <circle cx="284" cy="857" r="2.5" fill="#68CAA6" fill-opacity=".75"/>
     </svg>
 
     <!-- layer 01 — enclava.dev -->
@@ -757,7 +757,7 @@ footer{border-top:1px solid var(--border);padding:66px 0 44px;background:rgba(17
       <div class="core-ring">
         <div class="core-disc">
           <svg width="26" height="26" viewBox="0 0 30 30" fill="none" aria-hidden="true">
-            <defs><linearGradient id="cg" x1="0" y1="0" x2="30" y2="30"><stop stop-color="#0DCCF2"/><stop offset=".5" stop-color="#10CFC3"/><stop offset="1" stop-color="#12D393"/></linearGradient></defs>
+            <defs><linearGradient id="cg" x1="0" y1="0" x2="30" y2="30"><stop stop-color="#6AC7DC"/><stop offset=".5" stop-color="#69C8C1"/><stop offset="1" stop-color="#68CAA6"/></linearGradient></defs>
             <rect x="8" y="8" width="14" height="14" rx="2.5" stroke="url(#cg)" stroke-width="1.5"/>
             <path d="M15 3v3M15 24v3M3 15h3M24 15h3M7 3v3M23 3v3M7 24v3M23 24v3M3 7h3M3 23h3M24 7h3M24 23h3" stroke="url(#cg)" stroke-width="1.5" stroke-linecap="round"/>
           </svg>
